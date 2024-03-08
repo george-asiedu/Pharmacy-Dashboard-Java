@@ -46,7 +46,7 @@ public class MainLayout extends AppLayout {
 
     private void addDrawerContent() {
         H1 appName = new H1("Fahbabs Pharmacy");
-        appName.addClassNames(LumoUtility.FontSize.LARGE, LumoUtility.Margin.NONE);
+        appName.addClassName("title");
         Header header = new Header(appName);
 
         Scroller scroller = new Scroller(createNavigation());
@@ -56,6 +56,7 @@ public class MainLayout extends AppLayout {
 
     private SideNav createNavigation() {
         SideNav nav = new SideNav();
+        nav.addClassName("nav-list");
 
         nav.addItem(new SideNavItem("Dashboard", Dashboard.class, LineAwesomeIcon.GLOBE_SOLID.create()));
         nav.addItem(new SideNavItem("Add Medicine", AddMedicine.class, LineAwesomeIcon.PLUS_SOLID.create()));

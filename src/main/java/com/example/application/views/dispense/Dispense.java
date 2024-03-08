@@ -46,21 +46,21 @@ public class Dispense extends VerticalLayout {
         text.addClassName("text");
 
         DatePicker date = new DatePicker("Select Date");
-        date.getStyle().setWidth("250px");
+        date.getStyle().setWidth("300px");
         TextField amount = new TextField("Amount", "amount");
-        amount.getStyle().setWidth("250px");
+        amount.getStyle().setWidth("300px");
         TextField quantity = new TextField("Quantity", "quantity bought");
-        quantity.getStyle().setWidth("250px");
+        quantity.getStyle().setWidth("300px");
 
         Select<String> select = new Select<>();
         select.setLabel("Category");
         select.setItems("Antiseptics", "Antimalarial", "Antibiotics");
         select.setPlaceholder("select category");
-        select.getStyle().setWidth("250px");
+        select.getStyle().setWidth("300px");
         TextField medicine = new TextField("Medicine");
-        medicine.getStyle().setWidth("250px");
+        medicine.getStyle().setWidth("300px");
         TextField categoryQuantity = new TextField("Quantity");
-        categoryQuantity.getStyle().setWidth("250px");
+        categoryQuantity.getStyle().setWidth("300px");
 
         H5 medicineName = new H5("Medicine Name");
         medicineName.addClassName("card-text");
