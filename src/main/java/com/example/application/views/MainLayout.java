@@ -1,13 +1,19 @@
 package com.example.application.views;
 
-import com.example.application.views.about.AboutView;
-import com.example.application.views.helloworld.HelloWorldView;
+import com.example.application.views.about.AddMedicine;
+import com.example.application.views.category.Category;
+import com.example.application.views.dispense.Dispense;
+import com.example.application.views.helloworld.Dashboard;
+import com.example.application.views.product.Product;
+import com.example.application.views.purchase.Purchase;
+import com.example.application.views.record.Record;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.html.Footer;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Header;
+import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.Scroller;
 import com.vaadin.flow.component.sidenav.SideNav;
 import com.vaadin.flow.component.sidenav.SideNavItem;
@@ -39,7 +45,7 @@ public class MainLayout extends AppLayout {
     }
 
     private void addDrawerContent() {
-        H1 appName = new H1("Pharmacy");
+        H1 appName = new H1("Fahbabs Pharmacy");
         appName.addClassNames(LumoUtility.FontSize.LARGE, LumoUtility.Margin.NONE);
         Header header = new Header(appName);
 
@@ -51,16 +57,19 @@ public class MainLayout extends AppLayout {
     private SideNav createNavigation() {
         SideNav nav = new SideNav();
 
-        nav.addItem(new SideNavItem("Hello World", HelloWorldView.class, LineAwesomeIcon.GLOBE_SOLID.create()));
-        nav.addItem(new SideNavItem("About", AboutView.class, LineAwesomeIcon.FILE.create()));
-
+        nav.addItem(new SideNavItem("Dashboard", Dashboard.class, LineAwesomeIcon.GLOBE_SOLID.create()));
+        nav.addItem(new SideNavItem("Add Medicine", AddMedicine.class, LineAwesomeIcon.PLUS_SOLID.create()));
+        nav.addItem(new SideNavItem("Category", Category.class, VaadinIcon.LIST.create()));
+        nav.addItem(new SideNavItem("Products", Product.class, VaadinIcon.STORAGE.create()));
+        nav.addItem(new SideNavItem("Purchase", Purchase.class, VaadinIcon.CART.create()));
+        nav.addItem(new SideNavItem("Records", Record.class, VaadinIcon.DATABASE.create()));
+        nav.addItem(new SideNavItem("Dispense", Dispense.class, VaadinIcon.MONEY.create()));
         return nav;
     }
 
     private Footer createFooter() {
-        Footer layout = new Footer();
 
-        return layout;
+        return new Footer();
     }
 
     @Override
